@@ -1,5 +1,9 @@
 ## envconfig
 
+The reason for this library is to have a way to load many environment variables, assign them a default value if it is necessary and show a message when the default value is used.
+
+It only supports ints and strings because IMO those are the types more used for configurations.
+
 Load values from environment variables
 
 	cfg := envconfig.New()
