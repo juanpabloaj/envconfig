@@ -30,6 +30,24 @@ Change the message shown when a default value is used
 
     2023/07/11 15:42:32 using default value for HTTP_PORT: 8080
 
+Load many variables
+
+	intVars := map[string]int{
+		"PORT":                    8080,
+		"MAX_CONNECTIONS":         100,
+		"MAX_IDLE_CONNECTIONS":    10,
+		"MAX_CONNECTION_LIFETIME": 1000,
+		"TIMEOUT":                 1000,
+	}
+
+	for k, v := range intVars {
+		cfg.LoadInt(k, v)
+	}
+
+	for k := range intVars {
+		fmt.Println(k, cfg.Ints[k])
+	}
+
 Features
 
 - load configuration values from environment variables
