@@ -1,4 +1,8 @@
 // Package envconfig gets values from environment variables
+//
+// The reason for this library is to have a way to load many environment
+// variables, assign them a default value if it is necessary and show a message
+// when the default value is used.
 package envconfig
 
 import (
